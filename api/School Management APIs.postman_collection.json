@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "6b7af716-f7a4-4a13-b059-d65c45f3adcc",
+		"name": "School Management APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41704684"
+	},
+	"item": [
+		{
+			"name": "Add School API",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"St. Xavier School\",\r\n  \"address\": \"Ponda, Goa\",\r\n  \"latitude\": 15.402,\r\n  \"longitude\": 73.977\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Schools API",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listSchools?lat=15.400&lng=73.980",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "15.400"
+						},
+						{
+							"key": "lng",
+							"value": "73.980"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
